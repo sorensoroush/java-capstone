@@ -1,0 +1,58 @@
+Import scanner class
+Import datetime module
+Import datetime formatter module
+
+Define class MetersConverter:
+    Define printHeader function:
+        Assign working directory as workingDirectory
+        Assign local username as localUsername
+        Assign current datetime as now
+        Assign datetime format as datetimeFormat
+        Assign formatted now as formattedNow
+
+        Print string with workingDirectory
+        Print string with localUsername
+        Print string with formattedNow
+		
+    Define showKilometer function (accepts: meters):
+    	Assign metersToKilometers as meters * 0.001
+    	Print string using meters and metersToKilometers
+		
+    Define showInches function (accepts: meters):
+		Assign metersToInches as meters * 39.3701
+		Print string using meters and metersToInches
+
+    Define showFeet function (accepts: meters):
+    	Assign metersToFeet as meters * 3.28084
+    	Print string using meters and metersToFeet
+    	
+    Define menu function:
+    	Initialize choice as 0
+    	Print menu
+    	While choice is not between 1 and 4:
+    		Input choice
+    		Switch block for selection of choice:
+    			Case choice is 1:
+    				Call showKilometers
+    				Return false
+    			Case choice is 2:
+    				Call showInches
+    				Return false
+    			Case choice is 3:
+    				Call showFeet
+    				Return false
+    			Case choice is 4:
+    				Print "bye!"
+    				Return true
+    			Default:
+    				Print "invalid selection"
+    				
+		
+	Define main function:
+		Call printHeader function
+		
+		Input user name as name
+		Initialize programRunning as True
+		
+		While programRunning is True:
+			Assign programmingRunning as return of menu function call
